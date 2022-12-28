@@ -3,3 +3,5 @@
 */.devcontainer
 */dataset
 */notes
+.DS_Store
+*/.DS_Store
