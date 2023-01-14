@@ -26,6 +26,8 @@ groups = words_nonull.groupby(F.col('word'))
 results = groups.count()
 results_2 = results.orderBy(F.col('count').desc())
 
+PROCESSED_DATA_PATH = 's3://data-engg-suman/processed_data/book-1'
+results_2.coalesce(1).write.csv(PROCESSED_DATA_PATH)
 
 # Show
 results_2.show()
